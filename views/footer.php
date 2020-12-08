@@ -18,7 +18,6 @@
     <script src="js/navbar.js"></script>
     <script src="js/category-select.js"></script>
     <script src="js/overlayContactOn.js"></script>
-    <script src="js/loadMore.js"></script>
 </body>
 
 </html>

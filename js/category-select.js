@@ -1,13 +1,54 @@
+let limit = 5
 
 function button(){
     if(document.querySelectorAll(".work").length >= 5){
-        document.querySelector(".check-more").style.display = "block";
+        let works = document.querySelectorAll(".works-grid>div")
+        if(works.length > limit){
+            document.querySelector(".check-more").style.display = "block";
+        }
+        else{
+            document.querySelector(".check-more").style.display = "none";
+        }
     }
     
     else{
         document.querySelector(".check-more").style.display = "none";
     }
 }
+
+function hideProducts(){
+    let works = document.querySelectorAll(".works-grid>div")
+    works = Array.from(works)
+    works.map(item => {
+        item.style.display = "none";
+    })
+}
+
+
+function showProductsByLimit(){
+    let works = document.querySelectorAll(".works-grid>div")
+    works = Array.from(works)
+    works.map((item,index) => {
+        if(index < limit){
+            item.style.display = "block";
+        }
+    })
+}
+
+function increment(){
+    limit += 5
+    button()
+    hideProducts()
+    showProductsByLimit()
+}
+
+window.onload = function(){
+    button()
+    hideProducts()
+    showProductsByLimit()
+}
+
+
 
 let categories = document.getElementsByClassName("category-name")
 categories = Array.from(categories)
@@ -31,7 +72,10 @@ function AJAX_changeCategory(category){
         if(this.readyState == 4 && this.status == 200)
         {
             document.querySelector(".works-grid").innerHTML = this.responseText;
+            limit = 5
             button()
+            hideProducts()
+            showProductsByLimit()            
         }
     }
     xhr.open("GET",`userSelectCategory.php?category=${category}`,true);
