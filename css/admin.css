@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:focus{
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 800px;
+    height: 573px;
+    background: rgba(38, 36, 49, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alert{
+    display: none;
+}
+
+.title{
+    margin-top: 40px;
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    color :#191B24;
+}
+
+.data{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    opacity: 0.5;
+    margin-top: 15px;
+}
+
+.log-in-data{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #191B24;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.email-label{
+    margin-top: 65px;
+}
+
+::placeholder{
+    font-family:" Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    opacity: 0.5;
+}
+
+input[type="email"],input[type="password"]{
+    width: 450px;
+    height: 60px;
+    padding-left: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-family:" Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    margin-top: 8px;
+}
+
+input[type="submit"]{
+    width: 450px;
+    height: 60px;
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: rgb(34, 108, 224);
+    border-radius: 2px;
+    border: none;
+    margin-top: 60px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

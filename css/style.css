@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 *{
     margin: 0;
     padding: 0;
@@ -163,12 +156,15 @@ nav>span{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    color: white;
     font-family: "Inter",sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     gap: 10px;
+}
+
+nav>span>a{
+    color:white;
 }
 
 header h3{
@@ -228,9 +224,9 @@ header button{
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    background: rgba(43, 139, 64, 1);
+    background: #226CE0;
     border: none;
-    border-radius: 8px;
+    border-radius: 2px;
     cursor: pointer;
     margin:0 auto;
     -webkit-transition: -webkit-transform 1s;
@@ -247,10 +243,11 @@ header button:hover{
     -webkit-transform: scale(1.020);
         -ms-transform: scale(1.020);
             transform: scale(1.020);
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 139, 64, 0.8)), to(rgba(43, 139, 64, 0.8))), #FFFFFF;
-    background: -o-linear-gradient(bottom, rgba(43, 139, 64, 0.8), rgba(43, 139, 64, 0.8)), #FFFFFF;
-    background: linear-gradient(0deg, rgba(43, 139, 64, 0.8), rgba(43, 139, 64, 0.8)), #FFFFFF;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(34, 108, 224, 0.8)), to(rgba(34, 108, 224, 0.8))), #FFFFFF;
+    background: -o-linear-gradient(bottom, rgba(34, 108, 224, 0.8), rgba(34, 108, 224, 0.8)), #FFFFFF;
+    background: linear-gradient(0deg, rgba(34, 108, 224, 0.8), rgba(34, 108, 224, 0.8)), #FFFFFF;
 }
+
 
 .header-scroll{
     display: flex;
@@ -371,6 +368,16 @@ header button:hover{
     position: relative;
 }
 
+.works>.work>img{
+    width: 272px;
+    height: 272px;
+}
+
+.works-grid>div>.work>img{
+    width: 200px;
+    height: 200px;
+}
+
 
 .middle{
     opacity: 0;
@@ -381,7 +388,7 @@ header button:hover{
   -ms-transform: translate(-50%, -50%);
     color: white;
     border: 1px solid white;
-    border-radius: 5px;
+    border-radius: 2px;
     font-family: "Inter",sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -389,6 +396,7 @@ header button:hover{
     padding: 16px 30px;
     z-index:1;
 }
+
 .work:hover img{
     filter: brightness(50%);
 }
@@ -398,7 +406,7 @@ header button:hover{
 }
 
 .middle:hover{
-    background-color: #2B8B40;
+    background-color: rgb(34, 108, 224);
     border: none;
 }
 
@@ -678,14 +686,14 @@ box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.15);
 .contact-us form input[type="submit"]{
     width: 150px;
     height: 48px;
-    background: rgb(43,139,64,1);
+    background: rgba(34, 108, 224,1);
     border: none;
     color: white;
     font-family: "Inter",sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    border-radius: 8px;
+    border-radius: 2px;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -693,7 +701,7 @@ box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.15);
 }
 
 .contact-us form input[type="submit"]:hover{
-    background: rgb(43,139,64,0.8);
+    background: rgba(34, 108, 224, 0.8);
 }
 
 footer{
@@ -766,7 +774,7 @@ footer>div{
 }
 
 .home{
-    color:#55A266;
+    color:#226CE0;
 }
 
 .categories{
@@ -807,3 +815,165 @@ input[name="category"]{
     display: none;
 }
 
+.works-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 25px;
+    grid-row-gap:40px;
+    grid-column-gap: 25px;
+}
+
+.works-grid>div{
+    display: grid;
+    justify-content: center;
+}
+
+
+.load-more-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.check-more{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #191B24;
+    padding: 10px 40px;
+    border: 1px solid #191B24;
+    border-radius: 2px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    display: none;
+}
+
+.check-more:hover{
+    background: #191B24;
+    color: white;
+}
+
+.product-title{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(25, 27, 36, 0.5);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.product-price{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #191B24;
+    margin-top: 5px;
+}
+
+.product{
+    padding-top: 140px;
+}
+
+.catalog-back{
+    color: #226CE0;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    margin-top: 15px;
+    grid-column-gap: 60px;
+}
+
+.product-image>img{
+    width: 400px;
+    height: 400px;
+}
+
+#product-title{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: #191B24;
+}
+
+#product-category{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #191B24;
+    margin-top: 15px;
+}
+
+#product-category>span{
+    font-weight: 500;
+}
+
+#product-price{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #191B24;
+    margin-top: 15px;
+}
+
+.product-info>hr{
+    opacity: 0.1;
+    height: 1px;
+    background-color: #191B24;
+    border:none;
+    margin-top: 30px;
+}
+
+.product-button{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 16px 30px;
+    margin-top: 30px;
+    background: rgb(34, 108, 224);
+    border-radius: 2px;
+    border:none;
+    cursor: pointer;
+}
+
+#product-description-feedback{
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+#product-description-feedback>span{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #191B24;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #191B24;
+}
+
+.product-description {
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #191B24;
+    width: 602px;
+    height: auto;
+    margin-top: 25px;
+    
+}
+
+.product-category-name{
+    text-transform: capitalize;
+}

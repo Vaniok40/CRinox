@@ -1,3 +1,14 @@
+
+function button(){
+    if(document.querySelectorAll(".work").length >= 5){
+        document.querySelector(".check-more").style.display = "block";
+    }
+    
+    else{
+        document.querySelector(".check-more").style.display = "none";
+    }
+}
+
 let categories = document.getElementsByClassName("category-name")
 categories = Array.from(categories)
 
@@ -19,18 +30,19 @@ function AJAX_changeCategory(category){
     xhr.onreadystatechange=function(){
         if(this.readyState == 4 && this.status == 200)
         {
-            window.location.href=`catalog.php?category=${category}`
+            document.querySelector(".works-grid").innerHTML = this.responseText;
+            button()
         }
     }
-    xhr.open("GET",`catalog.php`,true);
+    xhr.open("GET",`userSelectCategory.php?category=${category}`,true);
     xhr.send();
 }
 
 let radioButtons = document.querySelectorAll("input[name='category']")
 radioButtons = Array.from(radioButtons)
 radioButtons.map(item => {
-    item.addEventListener("change", (event) =>{
-        AJAX_changeCategory(item.value)
+    item.addEventListener("click", () =>{
+        AJAX_changeCategory(item.value);
     })
 })
 

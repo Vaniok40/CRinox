@@ -29,7 +29,7 @@
             </ul>
             <span>
                 <img src="img/phone-call.svg" alt="phone">
-                +373 622 35 156
+                <a href="tel:+37378152213">+373 622 35 156</a>
             </span>
         </nav>
     </div>

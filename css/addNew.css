@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+textarea{
+    resize: none;
+}
+
+button{
+    outline: none;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-column-gap: 50px;
+}
+
+.upload>label {
+    cursor: pointer;
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10px;
+}
+ 
+ #upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
+
+ .product-image>img{
+     display: block;
+     width: 400px;
+     height: 400px;
+ }
+
+ .upload{
+     margin-top: 15px;
+ }
+
+ .preview{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000;
+ }
+
+ .title{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 15px;
+ }
+
+ .input{
+    width: 682px;
+    height: 40px;
+    background: #F7F7F7;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    margin-top: 8px;
+    padding-left: 15px;
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #191B24;
+ }
+
+ .price{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 30px;
+ }
+
+ .category{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #191B24;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.categories>label{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+}
+
+.description{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 30px;
+}
+
+textarea{
+    width: 682px;
+    height: 152px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-top: 5px;
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #191B24;
+}
+
+input[type="submit"]{
+    width: 247px;
+    height: 56px;
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #226CE0;
+    border-radius: 2px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.cancel{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #212121;
+    background: transparent;
+    border: none;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+.additive-images>img {
+    width: 90px;
+    height: 90px;
+}
+
+.additive-images{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 13px;
+}
