@@ -8,22 +8,31 @@
 }
 
 body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .container{
     width: 800px;
     height: 573px;
     background: rgba(38, 36, 49, 0.03);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.alert{
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .title{
@@ -52,13 +61,53 @@ body{
     font-size: 16px;
     text-transform: uppercase;
     color: #191B24;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 100%;
 }
 
 .email-label{
     margin-top: 65px;
+}
+
+::-webkit-input-placeholder{
+    font-family:" Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    opacity: 0.5;
+}
+
+::-moz-placeholder{
+    font-family:" Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    opacity: 0.5;
+}
+
+:-ms-input-placeholder{
+    font-family:" Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    opacity: 0.5;
+}
+
+::-ms-input-placeholder{
+    font-family:" Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #191B24;
+    opacity: 0.5;
 }
 
 ::placeholder{
@@ -76,7 +125,8 @@ input[type="email"],input[type="password"]{
     padding-left: 15px;
     background: #FFFFFF;
     border: 1px solid #E6E6E6;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 2px;
     font-family:" Inter",sans-serif;
     font-style: normal;
@@ -94,14 +144,37 @@ input[type="submit"]{
     font-weight: normal;
     font-size: 20px;
     color: #FFFFFF;
-    background: rgb(34, 108, 224);
+    background: rgba(34, 108, 224, 1);
     border-radius: 2px;
     border: none;
     margin-top: 60px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
 }
 
+input[type="submit"]:hover{
+    background: rgba(34, 108, 224, 0.8);
+    cursor: pointer;
+}
+
+
 form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.error{
+    font-family: "Inter",sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: red;
 }

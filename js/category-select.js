@@ -1,7 +1,7 @@
-let limit = 5
+let limit = 10
 
 function button(){
-    if(document.querySelectorAll(".work").length >= 5){
+    if(document.querySelectorAll(".work").length >= 10){
         let works = document.querySelectorAll(".works-grid>div")
         if(works.length > limit){
             document.querySelector(".check-more").style.display = "block";
@@ -36,7 +36,7 @@ function showProductsByLimit(){
 }
 
 function increment(){
-    limit += 5
+    limit += 10
     button()
     hideProducts()
     showProductsByLimit()
@@ -72,7 +72,7 @@ function AJAX_changeCategory(category){
         if(this.readyState == 4 && this.status == 200)
         {
             document.querySelector(".works-grid").innerHTML = this.responseText;
-            limit = 5
+            limit = 10
             button()
             hideProducts()
             showProductsByLimit()            

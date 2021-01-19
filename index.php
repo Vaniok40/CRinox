@@ -1,27 +1,43 @@
 <?php 
+session_start();
 require 'connect.php';
-require 'views/header.php';
-// if(!isset($_COOKIE["user"])){
-//     $ids = "a,";
-//     setcookie("user", true, time() + (86400 * 30), "/");
-//     setcookie("userProducts", $ids, time() + (86400 * 30), "/");
-// }
+$inactive = 60*60*24;
+if( !isset($_SESSION['timeout']) ){
+    $_SESSION['timeout'] = time() + $inactive;  
+    $_SESSION['ids'] = array();
+}
+
+$session_life = time() - $_SESSION['timeout']; 
+
+if($session_life > $inactive){
+    session_unset();
+    session_destroy();
+}
+
+$_SESSION['timeout']=time();
 ?>
+<title>CRinox-Shine | Constructii din Inox</title>
+<meta name="description"
+    content="Crinox Shine - Companie ce ofera constructii din Inox. Construim balustrade, scări, porți, garduri, din inox - Material inoxidabil" />
+<meta name="keywords"
+    content="Inox, Balustrade, Copertine, Porti / Garduri, Scari, Lucrari de inox, Materiale de inox, Balustrade cu laminare">
+<?php require 'views/header.php';?>
+
 <header id="acasa">
     <div class="container">
         <h3>
             Crinox Shine SRL
         </h3>
         <h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-        </h1>
+            Lumea Inoxului -
+            Profesionalism, Originalitate, Creativitate, Durabilitate</h1>
         <h6>
             Compania Crinox Shine execut&#259; o gam&#259; larg&#259; de balustrade de inox de interior &#351;i
             exterior, diverse
             construc&#355;ii din inox, accesorii pentru mobilier &#351;i buc&#259;t&#259;rie
         </h6>
         <div class="header-button">
-            <button>Vezi serviciile noastre</button>
+            <a href="#works">Vezi ultimele lucr&#259;ri</a>
         </div>
     </div>
     <div class="header-scroll">
@@ -48,7 +64,7 @@ require 'views/header.php';
         <div class="offer">
             <img src="img/echipament_modern.svg" alt="echipament_modern">
             <div>
-                <div class="offer-title">Echipament moder</div>
+                <div class="offer-title">Echipament modern</div>
                 <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
@@ -77,9 +93,10 @@ require 'views/header.php';
 </section>
 <section id="works" class="best">
     <div class="container">
-        <div class="best-title">
-            &#x25CF;&nbsp;&nbsp;<span>Ultimele lucr&#259;ri</span>&nbsp;&nbsp;&#x25CF;
-        </div>
+        <h1 class="best-title">
+            <span class="circles">&#x25CF;&nbsp;&nbsp;</span><span>Ultimele lucr&#259;ri</span><span
+                class="circles">&nbsp;&nbsp;&#x25CF;</span>
+        </h1>
         <div class="see-all">
             <a href="catalog.php">
                 Vezi toate lucr&#259;rile&nbsp;<img src="img/chevron-right.svg" alt="right">
@@ -87,13 +104,15 @@ require 'views/header.php';
         </div>
         <div class="works">
             <?php 
-                    $sql = "SELECT id,poza from produse ORDER BY id DESC";
+                    $sql = "SELECT id, denumire, poza from produse ORDER BY id DESC";
                     $query = mysqli_query($connect,$sql);
                     $i = 0;
                     foreach($query as $item){
+                    $arr = explode(',',$item["poza"]);
                     ?>
-            <div class="work"><a href="product.php?id=<?= $item["id"];?>" class="middle">Detalii</a><img
-                    src="uploads/<?=$item["poza"];?>" alt="<?=$item["poza"];?>"></div>
+            <div class="work"><a href="product.php?id=<?=$item["id"];?>" class="middle">Detalii</a><img
+                    src="uploads/<?php if(isset($arr[1])){echo $arr[1];} else{echo "placeholder.png";}?>" alt="<?php if(isset($arr[1])){echo $arr[1];} else{echo "placeholder.png";}?>
+                    " title="Crinox-Shine | <?=ucfirst($item["denumire"])?>"></div>
             <?php 
                         $i++;
                         if($i == 4){
@@ -111,7 +130,8 @@ require 'views/header.php';
         </div>
         <div class="story-text">
             <div class="story-title">
-                &#x25CF;&nbsp;&nbsp;<span>Povestea noastr&#259;</span>&nbsp;&nbsp;&#x25CF;
+                <span class="circles">&#x25CF;&nbsp;&nbsp;</span><span>Povestea noastr&#259;</span><span
+                    class="circles">&nbsp;&nbsp;&#x25CF;</span>
             </div>
             <div class="story-description">Avem o echip&#259; t&#226;n&#259;r&#259;, energic&#259; &#351;i
                 creativ&#259;. Venind la noi, ve&#355;i r&#259;m&#226;ne &#238;ntotdeauna pl&#259;cut surprins de
@@ -127,9 +147,10 @@ require 'views/header.php';
     <div class="container">
         <div>
             <div>
-                <div class="contact-title">
-                    &#x25CF;&nbsp;&nbsp;<span>Contacteaz&#259;-ne</span>&nbsp;&nbsp;&#x25CF;
-                </div>
+                <h1 class="contact-title">
+                    <span class="circles">&#x25CF;&nbsp;&nbsp;</span><span>Contacteaz&#259;-ne</span><span
+                        class="circles">&nbsp;&nbsp;&#x25CF;</span>
+                </h1>
                 <div class="contact-data">
                     <div>
                         <div><img src="img/location.svg" alt="location">&nbsp;str. Mihai Eminescu 50</div>
@@ -141,10 +162,11 @@ require 'views/header.php';
                     </div>
                 </div>
                 <form action="mail.php" method="post">
-                    <input maxlength="30" name="name" placeholder="Nume" type="text">
-                    <input name="email" placeholder="E-mail" type="text">
-                    <textarea maxlength="170" placeholder="Mesaj" name="message"></textarea>
-                    <input type="submit" value="Expediaz&#259;">
+                    <input maxlength="50" name="name" placeholder="Nume" required type="text">
+                    <input maxlength="50" class="mail-email" name="email" placeholder="E-mail" required type="email">
+                    <input maxlength="20" class="mail-email" name="tel" placeholder="Telefon" required type="text">
+                    <textarea maxlength="500" class="mail-message" placeholder="Mesaj" required name="message"></textarea>
+                    <input class="mail-submit" type="submit" value="Expediaz&#259;">
                 </form>
             </div>
             <iframe

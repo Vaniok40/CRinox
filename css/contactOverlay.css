@@ -1,27 +1,32 @@
 .contact-us-overlay{
-    padding-top: 90px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    padding-top: 0!important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     z-index:998;
-    display: none
+    display: none;
 }
 
 .overlay{
-    background: rgba(0, 0, 0, 0.0);   
-    margin-bottom: -128px;
-    padding-bottom: 128px;
-    position: relative;
-    z-index:997;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background: #191B24;
+    z-index: 998;
+    opacity: 0.7;
+    display: none;
 }
 
 .x{
-    position: absolute;
-    right: 50px;
-    top: 100px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/x.svg") no-repeat;
+    position: fixed;
+    right: -50px;
+    top: 0;
     z-index:999;
     display: none;
     cursor: pointer;
@@ -29,4 +34,39 @@
 
 .contact-bg{
     background-color: white;
+}
+
+@media screen and (max-width: 1350px){
+    .x{
+        right: 0;
+        background: url("../img/x-black.svg") no-repeat;
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+    }  
+}
+
+@media screen and (max-width: 1100px){
+    .x{
+        right: 35px;
+        background: url("../img/x-black.svg") no-repeat;
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+    }
+
+    .contact-us-overlay{
+        height: 100%;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .x{
+        right: 15px;
+        background: url("../img/x-black.svg") no-repeat;
+        width: 45px;
+        height: 45px;
+        background-size: contain;
+    }
 }

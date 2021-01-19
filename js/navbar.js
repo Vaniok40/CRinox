@@ -10,6 +10,7 @@ if(!url.includes("index.php") && url.charAt(url.length-1) != "/"){
       item.style.color = "#191B24";
     })
     document.querySelector("div.nav").style.background = "white";
+    document.querySelector(".burger").style.color = "black";
 }
 
 window.onscroll = function() {scroll()};
@@ -26,6 +27,7 @@ function scroll() {
       item.style.color = "#191B24";
     })
     document.querySelector("div.nav").style.background = "white";
+    document.querySelector(".burger").style.color = "black";
   } 
   else {
     if(url.includes("index.php") || url.charAt(url.length-1) == "/"){
@@ -39,6 +41,7 @@ function scroll() {
     links.forEach(item => {
       item.style.color = "white";
     })
+    document.querySelector(".burger").style.color = "white";
   }
   }
 }
