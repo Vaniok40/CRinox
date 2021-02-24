@@ -14,7 +14,7 @@ function generate($category,$connect){
             title="Crinox-Shine | <?=ucfirst($item["denumire"])?>">
     </div>
     <div class="product-title"><?=$item["denumire"]?></div>
-    <div class="product-price"><?php echo "De la " . $item["pret"] . "$"?></div>
+    <div class="product-price"><?=$item["pret"];?></div>
 </div>
 <?php   
     }
@@ -50,7 +50,7 @@ function generate($category,$connect){
             title="Crinox-Shine | <?=ucfirst($item["denumire"])?>">
     </div>
     <div class="product-title"><?=$item["denumire"]?></div>
-    <div class="product-price"><?php echo "De la " . $item["pret"] . "$"?></div>
+    <div class="product-price"><?=$item["pret"]?></div>
 </div>
 <?php
         }

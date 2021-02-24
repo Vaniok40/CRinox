@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crinox Shine - Companie ce ofera constructii din Inox. Construim balustrade, scări, porți, garduri, din inox - Material inoxidabil" />
+    <meta name="theme-color" content="#e9eaed">
+    <meta property='og:description' content='Crinox Shine - Companie ce ofera constructii din Inox. Construim balustrade, scări, porți, garduri, din inox - Material inoxidabil' />
+    <meta property='og:image' content='https://ibb.co/sF8Cmvz' />
+    <meta property='og:url' content='https://crinoxshine.md' />
+    <meta property='og:type' content='article' />
+    <meta property='og:site_name' content='CRinoxShine' />
+    <meta property='og:locale' content='ro_MD' />
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -49,7 +55,7 @@
             </ul>
             <span>
                 <img src="img/phone-call.svg" alt="phone">
-                <a href="tel:+37378152213">+373 622 35 156</a>
+                <a href="tel:+37378152213">+37369706727</a>
             </span>
             <span onclick="openNav()" class="burger">
                 &#9776;

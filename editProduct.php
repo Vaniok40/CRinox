@@ -22,8 +22,8 @@ $result = mysqli_fetch_array($query);
             <div class="position">
                 <div class="title">Titlul lucr&#259;ri</div>
                 <input required class="input" name="title" type="text" value="<?=$result["denumire"]?>" placeholder="Titlul">
-                <div class="price">De la c&#226;t se &#238;ncepe pre&#355;ul</div>
-                <input required class="input" name="price" type="text" value="<?=$result["pret"]?>" placeholder="Pre&#355;">
+                <div class="price">De la c&#226;t se &#238;ncepe pre&#355;ul / Negociabil</div>
+                <input required class="input" name="price" type="text" value="<?=$result["pret"]?>" placeholder="de la (pre&#355;) lei / Negociabil">
                 <div class="category">categorie</div>
                 <div class="categories">
                     <label><input required name="category" value="balustrade"

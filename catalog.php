@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 session_start();
 require 'connect.php';
@@ -19,6 +20,15 @@ $_SESSION['timeout']=time();
 
 ?>
 <title>CRinox-Shine | Catalog de lucr&#259;ri</title>
+<!-- <meta name="description"
+    content="Crinox Shine - Catalogul lucrărilor. Construim balustrade, scări, porți, garduri, din inox - Material inoxidabil" /> -->
+<meta name="keywords"
+    content="Inox, Balustrade, Copertine, Porti / Garduri, Scari, Lucrari de inox, Materiale de inox, Balustrade cu laminare">
+    <meta property='og:title' content='CRinox-Shine | Catalog de lucr&#259;ri' />
+    <meta property='og:url' content='https://crinoxshine.md' />
+    <meta property='og:type' content='article' />
+    <meta property='og:site_name' content='CRinoxShine' />
+    <meta property='og:locale' content='ro_MD' />
 <?php require 'views/header.php';?>
 <section class="catalog">
     <div class="container">
@@ -68,7 +78,7 @@ $_SESSION['timeout']=time();
         }
     ?>
                 </div>
-                <div class="product-price"><?php echo "De la " . $item["pret"] . " lei"?></div>
+                <div class="product-price"><?=$item["pret"];?></div>
             </div>
             <?php   
     }

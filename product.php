@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php 
 session_start();
 require 'connect.php';
@@ -33,11 +34,17 @@ $result = mysqli_fetch_array($query);
 $arr = explode(',',$result["poza"]);
 ?>
 <title>CRinox-Shine | <?=ucfirst($result["categorie"])?> din inox | <?=ucfirst($result["denumire"])?> | Pe &#238;ntreg
-    teritoriu al Republicii Moldova</title>
-<meta name="description"
-    content="Crinox Shine - <?=ucfirst($result["categorie"])?>/<?=ucfirst($result["denumire"])?> la cel mai avantajos pret, in orice punct al țării" />
+    teritoriul Republicii Moldova</title>
+<!-- <meta name="description"
+    content="Crinox Shine - <?=ucfirst($result["categorie"])?>/<?=ucfirst($result["denumire"])?> la cel mai avantajos pret, in orice punct al țării" /> -->
 <meta name="keywords"
     content="Inox, Balustrade, Copertine, Porti / Garduri, Scari, Lucrari de inox, Materiale de inox, Balustrade cu laminare">
+    <meta property='og:title' content='CRinox-Shine | <?=ucfirst($result["categorie"])?> din inox | <?=ucfirst($result["denumire"])?> | Pe &#238;ntreg
+    teritoriul Republicii Moldova' />
+    <meta property='og:url' content='https://crinoxshine.md' />
+    <meta property='og:type' content='article' />
+    <meta property='og:site_name' content='CRinoxShine' />
+    <meta property='og:locale' content='ro_MD' />
 <link rel="stylesheet" href="css/contactOverlay.css">
 <?php require 'views/header.php';?>
 <section class="product">
@@ -67,7 +74,7 @@ $arr = explode(',',$result["poza"]);
                 <h1 id="product-title"><?=$result["denumire"]?></h1>
                 <div id="product-category">Categorie:&nbsp;<span
                         class="product-category-name"><?=$result["categorie"]?></span></div>
-                <div id="product-price">de la <?=$result["pret"]?> lei</div>
+                <div id="product-price">Pre&#355;:&nbsp;<?=$result["pret"]?></div>
                 <hr>
                 <button onclick="overlayContactOn()" class="product-button">Contacteaz&#259;-ne</button>
                 <div id="product-description-feedback">

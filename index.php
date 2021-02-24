@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php 
 session_start();
 require 'connect.php';
@@ -17,10 +18,13 @@ if($session_life > $inactive){
 $_SESSION['timeout']=time();
 ?>
 <title>CRinox-Shine | Constructii din Inox</title>
-<meta name="description"
-    content="Crinox Shine - Companie ce ofera constructii din Inox. Construim balustrade, scări, porți, garduri, din inox - Material inoxidabil" />
 <meta name="keywords"
     content="Inox, Balustrade, Copertine, Porti / Garduri, Scari, Lucrari de inox, Materiale de inox, Balustrade cu laminare">
+    <meta property='og:title' content='CRinox-Shine | Constructii din Inox' />
+    <meta property='og:url' content='https://crinoxshine.md' />
+    <meta property='og:type' content='article' />
+    <meta property='og:site_name' content='CRinoxShine' />
+    <meta property='og:locale' content='ro_MD' />
 <?php require 'views/header.php';?>
 
 <header id="acasa">
@@ -51,42 +55,36 @@ $_SESSION['timeout']=time();
             <img src="img/calitate_impecabila.svg" alt="calitate_impecabila">
             <div>
                 <div class="offer-title">Calitate impecabil&#259;</div>
-                <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
         <div class="offer">
             <img src="img/experti_in_domeniu.svg" alt="experti_in_domeniu">
             <div>
                 <div class="offer-title">Exper&#355;i &#238;n domeniu</div>
-                <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
         <div class="offer">
             <img src="img/echipament_modern.svg" alt="echipament_modern">
             <div>
                 <div class="offer-title">Echipament modern</div>
-                <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
         <div class="offer">
             <img src="img/preturi_rezonabile.svg" alt="preturi_rezonabile">
             <div>
                 <div class="offer-title">Pre&#355;uri rezonabile</div>
-                <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
         <div class="offer">
             <img src="img/abordare_individuala.svg" alt="abordare_individuala">
             <div>
                 <div class="offer-title">Abordare individual&#259;</div>
-                <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
         <div class="offer">
             <img src="img/executare_rapida.svg" alt="executare_rapida">
             <div>
                 <div class="offer-title">Executare rapid&#259;</div>
-                <div class="offer-description">Lorem ipsum dolor sit amet</div>
             </div>
         </div>
     </div>
@@ -153,12 +151,12 @@ $_SESSION['timeout']=time();
                 </h1>
                 <div class="contact-data">
                     <div>
-                        <div><img src="img/location.svg" alt="location">&nbsp;str. Mihai Eminescu 50</div>
-                        <div class="space-data">Chisinau,&nbsp;MD&nbsp;-&nbsp;2008</div>
+                        <div><img src="img/location.svg" alt="location">&nbsp;str. Matei Basarab 5/1 of.9</div>
+                        <div class="space-data">Chisinau,&nbsp;MD&nbsp;-&nbsp;2045</div>
                     </div>
                     <div>
-                        <div><img src="img/phone-call-gray.svg" alt="phone">&nbsp;+373641235156</div>
-                        <div class="space-data"><img src="img/mail.svg" alt="mail">&nbsp;hello@cronixshine.com</div>
+                        <div><img src="img/phone-call-gray.svg" alt="phone">&nbsp;+37369706727</div>
+                        <div class="space-data"><img src="img/mail.svg" alt="mail">&nbsp;preguzaalexandru@gmail.com</div>
                     </div>
                 </div>
                 <form action="mail.php" method="post">
@@ -170,7 +168,7 @@ $_SESSION['timeout']=time();
                 </form>
             </div>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2737.5274966165452!2d28.06461821556225!3d46.675589079133935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ca10f334c82a67%3A0x273c0e79b27f42e2!2zU3RyYWRhIE1paGFpIEVtaW5lc2N1IDUwLCBIdciZaSA3MzUxMDAsINCg0YPQvNGL0L3QuNGP!5e0!3m2!1sru!2s!4v1606557921452!5m2!1sru!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6014.792041022643!2d28.864925075292483!3d47.054820516057056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97ce3bcd5fd21%3A0xddc900d52c8da6ad!2zU3RyYWRhIE1hdGVpIEJhc2FyYWIgNS8xLCBDaGnImWluxIN1LCDQnNC-0LvQtNCw0LLQuNGP!5e0!3m2!1sru!2s!4v1614082530244!5m2!1sru!2s"
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                 tabindex="0"></iframe>
         </div>

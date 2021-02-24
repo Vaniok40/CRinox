@@ -26,7 +26,7 @@ $nume = $_GET["name"];
         </div>
     </div>
     <div class="product-price">
-        de la <?=$item["pret"]?> lei
+        <?=$item["pret"]?>
     </div>
     <div class="product-category">
         <?=$item["categorie"]?>

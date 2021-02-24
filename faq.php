@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <title>CRinox-Shine | &#206;ntreb&#259;ri frecvente</title>
 <?php 
 require 'views/header.php';
@@ -10,90 +11,26 @@ require 'views/header.php';
         <div class="questions">
             <div class="question">
                 <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
+                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Calitatea materialului din care se realizeaz&#259; lucr&#259;rile?</div>
                 </div>
                 <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Calitate superioar&#259;, uzura metalului este nul&#259;.
                 </div>
             </div>
             <div class="question">
                 <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
+                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">&#206;n c&#226;t timp se realizeaz&#259; produsul solicitat?</div>
                 </div>
                 <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    &#206;n termenii stabili&#355;i de comun acord.
                 </div>
             </div>
             <div class="question">
                 <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
+                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Compania ofer&#259; garan&#355;ie?</div>
                 </div>
                 <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            <div class="question">
-                <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
-                </div>
-                <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            <div class="question">
-                <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
-                </div>
-                <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            <div class="question">
-                <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
-                </div>
-                <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            <div class="question">
-                <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
-                </div>
-                <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-            </div>
-            <div class="question">
-                <div class="plus-container">
-                    <img src="img/blue-plus.svg">&nbsp;&nbsp;<div class="accordion">Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit</div>
-                </div>
-                <div class="panel">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Garan&#355;ia este oferit&#259;	&#238;n baza contractului semnat bilateral.
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     <div class="container">
         <div>
             <img src="img/logo.svg" alt="logo">
-            <div class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</div>
+            <div class="footer-text">&#206;mpreun&#259; cu noi, visele D-voastr&#259; vor deveni realitate</div>
         </div>
         <ul class="footer-list">
             <li><a href="index.php#acasa">Acas&#259;</a></li>

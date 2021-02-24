@@ -120,7 +120,7 @@ if(!isset($_SESSION["admin"]) || $_SESSION["admin"] != 1){
                 </div>
             </div>
             <div class="product-price">
-                de la <?=$item["pret"]?> lei
+                <?=$item["pret"]?>
             </div>
             <div class="product-category">
                 <?=$item["categorie"]?>
