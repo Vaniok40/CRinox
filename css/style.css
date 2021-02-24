@@ -689,7 +689,7 @@ box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.15);
 }
 
 .contact-us form input[type="text"],.contact-us form input[type="email"]{
-    width: 475px;
+    width: 500px;
     height: 50px;
     margin-top: 5px;
     text-indent: 15px;
@@ -1548,7 +1548,7 @@ input[name="category"]{
     }
 
     .contact-us form input[type="text"],.contact-us form input[type="email"]{
-        width: 400px;
+        width: 425px;
     }
 
     .contact-us form textarea{
@@ -1658,7 +1658,7 @@ input[name="category"]{
     }
 
     .contact-us form input[type="text"],.contact-us form input[type="email"]{
-        width: 330px;
+        width: 355px;
     }
 
     .contact-us form textarea{
@@ -1790,7 +1790,7 @@ input[name="category"]{
     }
 
     .contact-us form input[type="text"],.contact-us form input[type="email"]{
-        width: 335px;
+        width: 360px;
     }
 
     .contact-us form textarea{
@@ -1911,7 +1911,7 @@ input[name="category"]{
     }
 
     .contact-us form input[type="text"], .contact-us form input[type="email"]{
-        width: 285px;
+        width: 310px;
         margin: 0 auto;
         text-indent: 15px;
         padding-left: 0;
@@ -1994,7 +1994,7 @@ input[name="category"]{
     }
 
     .contact-us form input[type="text"], .contact-us form input[type="email"]{
-        width: 240px;
+        width: 265px;
         margin-top: 15px;
     }
 

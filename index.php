@@ -17,7 +17,7 @@ if($session_life > $inactive){
 
 $_SESSION['timeout']=time();
 ?>
-<title>CRinox-Shine | Constructii din Inox</title>
+<title>CRinox-Shine | Construcții din Inox</title>
 <meta name="keywords"
     content="Inox, Balustrade, Copertine, Porti / Garduri, Scari, Lucrari de inox, Materiale de inox, Balustrade cu laminare">
     <meta property='og:title' content='CRinox-Shine | Constructii din Inox' />
